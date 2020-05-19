@@ -1,0 +1,89 @@
+:root {
+    --main-color: #0098f0;
+    --main-color-darker: #008fe1;
+    --main-color-faint: #a2e0f0;
+    --background-color: #f0f0f0;
+    --alert-color: #d64b42;
+    --text-color: #333;
+    font-size: 1em;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    color: var(--background-color);
+    background-color: var(--main-color);
+    padding: 2rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    margin: 5rem 5% 0;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem;
+    margin: 0;
+    color: var(--background-color);
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    min-width: 10rem;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+button:not(:disabled):active {
+    background-color: var(--main-color-darker);
+}
+
+strong {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+#game {
+    width: 70vmin;
+    display: none;
+    margin: 0 auto;
+}
+
+#game h1 {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+body.started #game {
+    display: block;
+}
+
+body.started #join-header{
+    display: none;
+}
+
+#game-grid {
+    display: block;
+    width: 70vmin;
+    height: 70vmin;
+    border-radius: 5vmin;
+    background-color: var(--main-color-faint);
+}
